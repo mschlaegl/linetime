@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
 
 	if (argc > 1) {
-		printf("Linetime V1.2 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>\n\n");
+		printf("Linetime V1.3 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>\n\n");
 		printf("Usage examples:\n");
 		printf("stdout:        $ <program to measure> | %s\n", argv[0]);
 		printf("stdout+stderr: $ <program to measure> 2>&1 | %s\n", argv[0]);
@@ -59,9 +59,9 @@ int main(int argc, char **argv)
 			last_newline = true;
 		}
 		putchar(c);
+		fflush(stdout);
 	}
 	/* print final timestamp after execution is complete */
 	print_timestamp(tstart);
 	printf("\n");
-	fflush(stdout);
 }
