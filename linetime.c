@@ -28,12 +28,12 @@ void print_timestamp(unsigned long long tstart)
 int main(int argc, char **argv)
 {
 	unsigned long long tstart;
-	char c;
+	int c;
 	bool last_newline;
 
 
 	if (argc > 1) {
-		printf("Linetime V1 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>\n\n");
+		printf("Linetime V1.1 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>\n\n");
 		printf("Usage examples:\n");
 		printf("stdout:        $ <program to measure> | %s\n", argv[0]);
 		printf("stdout+stderr: $ <program to measure> 2>&1 | %s\n", argv[0]);
