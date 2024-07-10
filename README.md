@@ -39,8 +39,8 @@ $ ./linetime --help
 Linetime V1 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>
 
 Usage examples:
-stdout:        $ <program to measure> | ./linetime
-stdout+stderr: $ <program to measure> 2>&1 | ./linetime
+stdout:        $ <program to measure> | linetime
+stdout+stderr: $ <program to measure> 2>&1 | linetime
 ```
 
 ### Example
