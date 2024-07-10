@@ -45,11 +45,12 @@ stdout+stderr: $ <program to measure> 2>&1 | linetime
 
 ### Example
 ```
-$ (sleep 0.3; echo "hello"; sleep 1; echo "world"; sleep 1.2; echo "!"; sleep 0.1) | linetime
-      0.302 : hello
-      1.305 : world
-      2.507 : !
-      2.609 : 
+$ (echo; sleep 0.3; echo "hello"; sleep 1; echo "world"; sleep 1.2; echo "!"; sleep 0.1) | ./linetime
+      0.000 : 
+      0.301 : hello
+      1.301 : world
+      2.502 : !
+      2.603 : 
 ```
 
 ### Format

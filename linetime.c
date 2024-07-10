@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 
 
 	if (argc > 1) {
-		printf("Linetime V1.1 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>\n\n");
+		printf("Linetime V1.2 (C) 2024 Manfred Schlaegl <manfred.schlaegl@gmx.at>\n\n");
 		printf("Usage examples:\n");
 		printf("stdout:        $ <program to measure> | %s\n", argv[0]);
 		printf("stdout+stderr: $ <program to measure> 2>&1 | %s\n", argv[0]);
@@ -45,14 +45,18 @@ int main(int argc, char **argv)
 	last_newline = true;
 	while (1) {
 		c = getchar();
-		if (c == EOF)
+		if (c == EOF) {
 			break;
-		if (c == '\n') {
-			last_newline = true;
-		} else if (last_newline) {
+		}
+
+		if (last_newline) {
 			/* print timestamp at first received character on a new line */
 			print_timestamp(tstart);
 			last_newline = false;
+		}
+
+		if (c == '\n') {
+			last_newline = true;
 		}
 		putchar(c);
 	}
