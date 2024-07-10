@@ -52,11 +52,12 @@ $ (sleep 0.3; echo "hello"; sleep 1; echo "world"; sleep 1.2; echo "!"; sleep 0.
       2.609 : 
 ```
 
-Format:
+### Format
 ```
       1.305 : world
 -Timestamp--: -Original output--------------------------------------
-
-Timestamp: seconds.milliseconds (above example: 1 second and 305 millisecons)
-
 ```
+Timestamp
+ * Timestamp of first character in output line (above example 'w') relative to program start
+ * Format: seconds.milliseconds (above example: 1 second and 305 millisecons)
+
